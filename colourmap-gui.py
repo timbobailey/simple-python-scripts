@@ -33,16 +33,11 @@ class Example(QWidget):
         self.show()
 
 
-
-
-
-
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     ex = Example()
     sys.exit(app.exec_())
-
 
 
 seabed = np.load('data/Penobscot_Seabed.npy')
