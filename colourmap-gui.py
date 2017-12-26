@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
+# Comment
 class Example(QWidget):
 
     def __init__(self):
