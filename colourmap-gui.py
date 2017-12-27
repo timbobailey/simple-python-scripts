@@ -1,6 +1,5 @@
 import sys
-from PyQt5.QtWidgets import (QWidget, QToolTip,
-    QPushButton, QApplication)
+from PyQt5.QtWidgets import (QWidget, QToolTip, QPushButton, QApplication)
 from PyQt5.QtGui import QFont
 
 import numpy as np
@@ -15,8 +14,6 @@ class Example(QWidget):
         super().__init__()
 
         self.initUI()
-
-
     def initUI(self):
 
         QToolTip.setFont(QFont('SansSerif', 10))
@@ -31,7 +28,6 @@ class Example(QWidget):
         self.setGeometry(300, 300, 300, 200)
         self.setWindowTitle('Tooltips')
         self.show()
-
 
 if __name__ == '__main__':
 
