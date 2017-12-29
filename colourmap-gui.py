@@ -29,20 +29,20 @@ class Example(QWidget):
         self.setWindowTitle('Tooltips')
         self.show()
 
+
 if __name__ == '__main__':
+    seabed = np.load('data/Penobscot_Seabed.npy')
+    fig = plt.figure(figsize=(8, 6))
+    ax = fig.add_subplot(111)
+    plt.imshow(seabed, aspect=0.5, cmap="viridis_r", origin='lower')
+    cbar = plt.colorbar(label="Two-way time")
+    cbar.ax.invert_yaxis()
+    ax.set_xlabel("Inline")
+    ax.set_ylabel("Xline")
+    ax.grid(color='w', alpha=0.2)
+    plt.show()
 
     app = QApplication(sys.argv)
     ex = Example()
+
     sys.exit(app.exec_())
-
-
-seabed = np.load('data/Penobscot_Seabed.npy')
-fig = plt.figure(figsize=(15,6))
-ax = fig.add_subplot(111)
-plt.imshow(seabed, aspect=0.5, cmap="viridis_r", origin='lower')
-cbar = plt.colorbar(label="Two-way time")
-cbar.ax.invert_yaxis()
-ax.set_xlabel("Inline")
-ax.set_ylabel("Xline")
-ax.grid(color='w', alpha=0.2)
-plt.show()
